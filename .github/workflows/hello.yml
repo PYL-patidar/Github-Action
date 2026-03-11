@@ -1,0 +1,24 @@
+# this is the workflow name
+name: greet
+
+# define event when trigger the workflow start to run 
+on:
+  push:
+    branches: 
+      - main
+
+# define number of jobs 
+jobs:
+  # mention name of job
+  greeting:
+    # then mention runner type 
+    runs-on: ubuntu-latest
+    # mention the steps to be execute the commands of the workflow
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+
+      - name: greet to others
+        run: echo "Hello Dosto!"
+  
+
