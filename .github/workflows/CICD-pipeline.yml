@@ -5,6 +5,7 @@ on:
  workflow_dispatch:
    inputs:
      environments: 
+       description: This is the option for select environment values
        default: "dev"
        required: true
        type: choice
