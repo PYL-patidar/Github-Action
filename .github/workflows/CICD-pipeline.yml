@@ -2,7 +2,7 @@ name: CICD-pipeline
 
 # manual click to start run workflow
 on: workflow_dispatch
-
+ # every job needs a seperate runner that is called parallelism
 jobs:
   code: 
     runs-on: ubuntu-latest
