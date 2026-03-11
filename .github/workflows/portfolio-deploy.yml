@@ -33,6 +33,8 @@ jobs:
       # static code artifect
       - name: Upload static files
         uses: actions/upload-pages-artifact@v4
+        with:
+          path: "."
 
       # Deploy to gtihub pages
       - name: Deploy to Github pages
