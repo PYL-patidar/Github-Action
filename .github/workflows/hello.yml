@@ -2,10 +2,11 @@
 name: greet
 
 # define event when trigger the workflow start to run 
-on:
-  push:
-    branches: 
-      - main
+on: 
+  workflow_dispatch: 
+  #push:
+  #  branches: 
+  #    - main
 
 # define number of jobs 
 jobs:
