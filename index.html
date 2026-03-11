@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payal Patidar | DevOps Learner</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#1d2671,#c33764);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+}
+
+.container{
+  width:90%;
+  max-width:1100px;
+}
+
+.glass{
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:20px;
+  padding:40px;
+  margin-bottom:30px;
+  transition:0.4s ease;
+}
+
+.glass:hover{
+  transform:translateY(-8px) scale(1.01);
+  box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+nav h1{font-size:24px}
+
+nav ul{display:flex;list-style:none;gap:20px}
+
+nav a{
+  text-decoration:none;
+  color:white;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  width:0%;
+  height:2px;
+  bottom:-4px;
+  left:0;
+  background:white;
+  transition:0.3s;
+}
+
+nav a:hover::after{width:100%}
+
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
+}
+
+.hero h2{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.hero span{color:#ffd369}
+
+.hero p{opacity:0.9;margin-bottom:20px}
+
+.btn{
+  display:inline-block;
+  padding:12px 25px;
+  border-radius:30px;
+  background:white;
+  color:#333;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+}
+
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:15px;
+}
+
+.skill{
+  padding:15px;
+  text-align:center;
+  border-radius:15px;
+  background:rgba(255,255,255,0.08);
+  transition:0.3s;
+}
+
+.skill:hover{
+  transform:translateY(-5px);
+  background:rgba(255,255,255,0.2);
+}
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.project{
+  padding:20px;
+  border-radius:15px;
+  background:rgba(255,255,255,0.08);
+  transition:0.3s;
+}
+
+.project:hover{
+  transform:translateY(-6px);
+  background:rgba(255,255,255,0.18);
+}
+
+footer{
+  text-align:center;
+  opacity:0.8;
+}
+
+@media(max-width:768px){
+.hero{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="glass">
+<nav>
+<h1>Payal Patidar</h1>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+</ul>
+</nav>
+
+<div class="hero" id="about">
+<div>
+<h2>Hello, I'm <span>Payal</span></h2>
+<p>
+DevOps learner currently working through the 90 Days of DevOps challenge. 
+I enjoy learning automation, shell scripting, and building small projects
+that simulate real production workflows.
+</p>
+<a class="btn" href="#projects">View My Work</a>
+</div>
+
+<div class="glass">
+<h3>Current Focus</h3>
+<p>
+Learning Shell Scripting, Log Rotation, Server Backup Automation, and
+building practical DevOps workflows.
+</p>
+</div>
+</div>
+</div>
+
+<div class="glass" id="skills">
+<h2>Skills</h2>
+<br>
+<div class="skills">
+<div class="skill">Linux</div>
+<div class="skill">Shell Scripting</div>
+<div class="skill">Git</div>
+<div class="skill">GitHub</div>
+<div class="skill">Automation</div>
+<div class="skill">DevOps Basics</div>
+</div>
+</div>
+
+<div class="glass" id="projects">
+<h2>Projects</h2>
+<br>
+<div class="projects">
+
+<div class="project">
+<h3>Server Backup Script</h3>
+<p>
+A shell script that automatically backs up server files and compresses
+logs for storage efficiency.
+</p>
+</div>
+
+<div class="project">
+<h3>Log Rotation Script</h3>
+<p>
+Script that compresses old logs using gzip and deletes outdated
+archives to maintain clean log storage.
+</p>
+</div>
+
+<div class="project">
+<h3>Cron Automation</h3>
+<p>
+Configured cron jobs to automate backup scripts daily at scheduled
+times.
+</p>
+</div>
+
+</div>
+</div>
+
+<div class="glass">
+<footer>
+<p>© 2026 Payal Patidar | DevOps Learning Journey</p>
+</footer>
+</div>
+
+</div>
+
+</body>
+</html>
