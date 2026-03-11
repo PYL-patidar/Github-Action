@@ -1,15 +1,38 @@
 name: portfolio
 
-#on:  
+on:  
   push:
     branches:
       - main
-    paths:
-      - "**.html"
+    #paths:
+    #  - "**.html"
+permissions:
+      pages: write      # to deploy to Pages
+      id-token: write
 
 jobs:
 
-  portfolio:
+  deploy:
     runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+
     steps:
-      - name: 
+      # get access to your portfolio code or code check of portfolio via a pre-build action
+      - name: checkout code
+        uses: actions/checkout@v5
+      
+      # a place where we can host our website like static website on github pages via a github pages pre-build action  
+      - name: setup github pages
+        uses: actions/configure-pages@v4
+
+      # static code artifect
+      - name: Upload static files
+        uses: actions/upload-pages-artifact@v4
+
+      # Deploy to gtihub pages
+      - name: Deploy to Github pages
+        uses: actions/deploy-pages@v4 
