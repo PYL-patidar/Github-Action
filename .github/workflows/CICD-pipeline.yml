@@ -1,7 +1,18 @@
 name: CICD-pipeline
 
 # manual click to start run workflow
-on: workflow_dispatch
+on: 
+ workflow_dispatch:
+   inputs:
+     environments: 
+       default: "dev"
+       required: true
+       type: choice
+       options:
+         - dev
+         - stag
+         - prod
+         
  # every job needs a seperate runner that is called parallelism
 jobs:
   code: 
