@@ -8,7 +8,7 @@ on:
     branches: 
       - main
     paths:
-      - "*.html"
+      - "**.html"
 
 # define number of jobs 
 jobs:
