@@ -25,4 +25,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: show details of system
-        run: $(uname -r)
+        run: $(uname -a)
