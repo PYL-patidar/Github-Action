@@ -1,0 +1,15 @@
+name: portfolio
+
+#on:  
+  push:
+    branches:
+      - main
+    paths:
+      - "**.html"
+
+jobs:
+
+  portfolio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 
