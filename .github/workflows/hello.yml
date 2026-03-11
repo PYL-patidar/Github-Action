@@ -20,5 +20,9 @@ jobs:
 
       - name: greet to others
         run: echo "Hello Dosto!"
-  
 
+  details: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: show details of system
+        run: $(uname -r)
