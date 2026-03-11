@@ -1,0 +1,26 @@
+name: CICD-pipeline
+
+# manual click to start run workflow
+on: workflow_dispatch
+
+jobs:
+  code: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        run: echo "Code Clone form github"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build docker containers
+        run: echo "build docker image"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test the containers
+        run: echo "check containers are running or not"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy app
+        run: echo "code deploy successfully"
