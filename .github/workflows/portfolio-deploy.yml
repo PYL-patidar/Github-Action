@@ -5,8 +5,8 @@ on:
   push:
     branches:
       - main
-    #paths:
-    #  - "**.html"
+    paths:
+      - "**.html"
 permissions:
       pages: write      # to deploy to Pages
       id-token: write
